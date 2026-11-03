@@ -1,0 +1,27 @@
+// Swap two numbers Pass by pointer
+
+#include <iostream>
+using namespace std;
+
+void swapNumbers(int *x, int *y)
+{
+    int temp =*x;
+    *x=*y;
+    *y=temp;
+}
+
+int main()
+{
+    int x, y;
+
+    cout<<"Enter two numbers: ";
+    cin>>x >>y;
+
+    cout<<"Before swapping: x = "<<x << ",y = "<<y<< endl;
+
+    swapNumbers(&x, &y);
+
+    cout<<"After swapping: x = "<<x << ",y = "<<y<< endl;
+
+    return 0;
+}
